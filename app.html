@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KINA Bet</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="slot.css">
+</head>
+<style>
+  #devices button{
+    width: 150px;
+    height: 90px;
+    transform: translateX(10px);
+  }
+  #devices{
+    position: fixed;
+    gap: 10px;
+  }
+  #devices p{
+    transform: translateY(-20px);
+  color: rgb(252, 54, 54);
+  font-size: 20px;
+  }
+</style>
+<body>
+  <!-- change here display is not here and on home -->
+  <div id="logIn" style="display: block;" >
+   
+    <div id="backLogIn">
+    
+      <br>
+     <div id="form1" style="background-image: url(win3.png);background-repeat: no-repeat;background-position-y:150px ;">
+      <br>
+      <img src="kina.png"  style="transform: translateX(-20px); " width="250px" height="210px" alt="">
+      <input type="text" placeholder="Enter your Name here"  id="userName" required><br>
+       <!-- demo amount here -->
+ 
+   <br>
+   <br>
+  
+    <input style="display: none;" type="number" value="15000" id="userCash" required>
+      <!-- demo amount here -->
+
+        <input type="submit" value="Enter" onclick="homeShow()">
+        <br>
+
+        <!-- <img src="win3.png" width="200px" alt=""> -->
+      </div>
+      <p style="transform: translateY(100px);"> <u> Your Amount is 15000 Frw</u> </p>
+    </div>
+
+    <p style="font-size: 13px; color: rgb(46, 248, 56);  transition: 0.6s;"><u>Created by Kevin</u></p>
+    <div id="overCash"></div> 
+  </div>
+  <div id="devices" style=" display: none;">
+   <p>Are you using :</p>
+    <button onclick="mobileHome()">MOBILE</button>
+    <button onclick="computerHome()">COMPUTER</button>
+  </div>
+  <div id="home"  style="display: none;">
+    <div id="nav">
+    <u  style="color: rgb(241, 157, 0);"><div id="nameUser" style="width: 76px; color: rgb(241, 157, 0); overflow: hidden;"></div></u>  
+    <u  style="color: rgb(241, 157, 0);">   <div id="amountUserNav" style="width: 70px;color: rgb(241, 157, 0);  "></div></u>
+      <button id="setingSH" onclick="goCasino()">Casino</button>
+       <div id="userSeting">
+        <!-- add here seting with deposite and wiwthdraw -->
+      
+        <br>
+      
+       </div>
+    </div>
+
+    <div id="backAllGames">
+    
+      <div id="gamesBack">
+        <br>
+        <div class="game"id="game2" onclick="appolo()" style="background-image: url(doge.jpg); background-size: cover;"></div>
+        <h1 onclick="appolo()"  style="background-color: rgb(241, 157, 0);color:rgb(34, 33, 32);border: 2px double rgb(241, 157, 0);width: 150px; border-radius: 10px;transform: translate(80px,-60px);"><u>Play Appolo 11</u></h1> 
+         
+      <br>
+       <div class="game" id="game1" onclick="guessShow()" style="background-image:url(guessBack.png) ;background-size: cover; overflow: hidden; background-position-y: -20px;background-size: 80%;background-position-x: 20px;"></div>
+      <h1 onclick="guessShow()" style="background-color: rgb(241, 157, 0);color:rgb(34, 33, 32);border: 2px double rgb(241, 157, 0);width: 150px; border-radius: 10px; transform: translate(80px,-60px);"><u>Play Guess</u></h1> 
+       
+     <br>  <div class="game"id="game2" onclick="slotShow()" style="background-image: url(slotBack.gif); background-size: cover;"></div>
+      <h1 onclick="slotShow()"  style="background-color: rgb(241, 157, 0);color:rgb(34, 33, 32);border: 2px double rgb(241, 157, 0);width: 150px; border-radius: 10px;transform: translate(80px,-60px);"><u>Play Slot</u></h1> 
+       
+      <br>
+      </div>
+     
+    </div>
+ 
+   
+    <div id="loading1" style="display: none;">
+     
+      <img src="guessBack.png" width="400px" height="300px" alt="">
+      <div id="loadBg">
+      
+        <div id="loading">Loading...</div>
+      
+      </div>
+      <br>
+      <p>Kevin <br> Gaming Demo</p>
+    </div>
+    <div id="guessGameBack"  style="display: none;">
+    
+
+      
+<div id="machineContainer">
+  <div id="lastsOdds"></div>
+  <div id="machineResult"></div>
+  <div id="posibleOutCome"></div>
+</div>
+<div id="message"> </div>
+<br>
+<br>
+<br>
+<div id="userChoiceBack">
+  Enter Amount to Bet Here
+  <div id="cashBack">
+ 
+    <input type="number" id="userCashBet">
+    
+    
+  </div>
+<div id="sugestedButtonBack">
+  <input type="button" value="100" onclick="one()">
+  <input type="button" value="200" onclick="two()" >
+  <input type="button" value="500"onclick="five()">
+  <input type="button" value="1000"onclick="k()">
+  <input type="button" value="2000"onclick="k2()">
+</div>
+Enter Number From 2 - 11 Here <br>
+<div id="betButtonBack">
+ 
+  <input type="number" id="userGuessNumber"  value="0">
+  <button id="betBtn" onclick="gameStart()">Bet</button>
+  <button id="waitBtn"  style="border: 2px solid rgb(252, 54, 54); display: none; background-color: rgb(255, 0, 0);">Waiting</button>
+</div>
+
+
+</div>
+    </div>
+  </div>
+  <div id="loading2" style="display: none;">
+    <p>SlotNumber <br> Demo</p>
+    <img src="slotBack1.gif" style="transform: translateX(-30px);" width="400px" height="300px" alt="">
+    <div id="loadBg">
+    
+      <div id="loading">Loading...</div>
+    
+    </div>
+    <br>
+    <p>Kevin <br> Gaming Demo</p>
+  </div>
+    <div id="slotGameBack" style="display: none;">
+      <div id="how-to">
+        <h3 onclick="back()">&LeftArrow;</h3>
+       
+        <span class="span1">
+      <ul>
+        <li>Win when 2 same numbers are followed each other</li>
+        <li>Win when 3 same numbers are followed each other</li>
+        <li>Odd is total of same equal numbers</li>
+        <li> Enter 1 number to be on same older </li>
+    
+      </ul>
+        </span>
+        </div>
+       
+        <div id="board">
+       <h4 onclick="how()">&quest;</h4> <nav>How to play</nav><br>
+            <div class="nbrs">
+                <div id="nbr1"></div>
+                <div id="nbr2"></div>
+                <div id="nbr3"></div>
+            </div>
+            <div id="Warning"></div>
+            <br>
+            <br>
+            <br>
+            Enter number from 1 - 5 here
+            <br>
+            <div class="nbrsx" >
+            
+                <input placeholder="Enter number" type="number" value="2" id="Order1">
+              
+            </div>
+            <div id="Win-Lose"></div>
+           Enter amount to bet here
+            <div class="inp">
+            <input type="number" class="input" id="price1" placeholder="Amount to bet" value="0">
+          <br><br>
+            <button onclick="Bet()" id="Bet">BET</button>
+            <button id="waiting">WAITING...</button>
+        </div>
+        <!-- <button onclick="see()">see</button> -->
+        </div>
+        </div>
+        <div id="loading3"  style="transform: translateX(-3px);display: none; background-color: white;">
+       
+          <img src="real appolo back.gif" style="transform: translate(-30px,-10px);" width="400px" height="300px" alt="">
+        <p>Kevin <br> Gaming Demo</p>
+          <div id="loadBg" style="border: 2px double rgb(0, 113, 165);transform: translate(60px,-80px);background-color: black;">
+          
+            <div id="loading" style="background-color: rgb(0, 113, 165) ;">- X - Loading...</div>
+          
+          </div>
+          <!-- <img style="transform: translate(-50px,-80px); width: 405px;height: 360px;" src="win2.jfif"  alt="">
+           -->
+           <img src="xlogo.jpg" width="400px" height="350px" style="transform: translate(-20px,-70px);" alt="">
+          <br>
+         
+        </div>
+        <div id="appoloBack" style="display:none;">
+<div id="machineAppoloBackAll">
+  <div id="lastOddAppolo"></div>
+
+  <div id="planeBack">
+ <div id="odd"><div id="realOdd" style="transform: translateY(25px); font-size: 17px;"></div></div>
+    <div id="plane">
+      <img id="roc1" src="rocket 1.gif" alt=""style=" display: none;">
+      <img id="roc2" src="rocket 1.gif" alt="" >
+    </div>
+  
+
+  </div>
+
+</div>
+<div id="appoloMessage"></div>
+<div id="userChoiseBack">
+  <div id="userCash">
+    <button  onclick="red()">-</button>
+    <input id="appoloAmount" value="0" type="number" placeholder="Enter amount to Bet">
+  <button  onclick="incre()">+</button>
+  </div>
+  <div id="selectedAmount">
+    <button onclick="twoH()">200</button> <br>
+    <button onclick="fiveH()">500</button> <br>
+    <button onclick="kH()"> 1000</button> <br>
+    <button onclick="tH()">2000</button>
+  </div>
+  <p  style="color: rgb(0, 113, 165);transform: translate(104px,10px); background-color: rgb(34, 33, 32); border-radius: 20px; width: 130px;"> Bet</p>
+  <div id="betOrCash">
+    <button id="betBtnAppolo" onclick="betAppolo()">BET</button>
+    <div id="appoloWaiting" style="display: none;">Waiting...</div>
+    <button style="display: none; background-color: rgb(46, 248, 56);" onclick="appoloCashOut()" id="cashoutBtnAppolo">Cash Out</button>
+  </div>
+  <!-- <p onclick="autoBetShow()" style="color: rgb(0, 113, 165);transform: translate(120px,10px); background-color: rgb(34, 33, 32); border-radius: 20px; width: 130px;">Auto Bet</p> -->
+  <div id="lastApolloOd"></div>
+  <!-- <input type="number" id="autobet" placeholder="Enter auto Cash out "> -->
+</div>
+
+        </div>
+        
+      </div>
+      
+  <script src="system.js"></script>
+
+
+ 
+</body>
+</html>

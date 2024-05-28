@@ -1,0 +1,227 @@
+body{
+    background-color: black;
+    text-align: center;
+}
+#board{
+    margin-left: 20px;
+    position: fixed;
+    transform: translateY(70px);
+    color: rgb(255, 0, 0);
+}
+.nbrs{
+    box-shadow: 1px 1px 10px 2px red;
+    border: 2px solid red;
+    border-radius: 15px;
+    width: 280px;
+    text-align: center;
+    height: 100px;
+    /* margin-left: 400px; */
+    margin-top: 5px;
+    background-color: transparent;
+}
+.nbrs div{
+    margin-left: 5px;
+    padding: auto;
+    font-size: 60px;
+    font-family: fantasy;
+    color: rgb(255, 217, 0);
+    text-shadow: 1px 1px 5px black;
+    text-align: center;
+    box-shadow: 1px 1px 10px 2px red;
+    background-color: rgb(78, 76, 76);
+    margin-top: 13px;
+    border-radius: 500px;
+    border: 2px solid red;
+    width: 70px;
+    display: inline-block;
+    height: 70px;
+}
+.nbrsx{
+    text-align: center;
+    box-shadow: 1px 1px 10px 2px red;
+    border: 2px solid red;
+    color: rgb(255, 0, 0);
+    border-radius: 20px;
+    background-color: transparent;
+    width: 100px;
+    height: 80px;
+    transform: translate(90px);
+    /* margin-top: 1px; */
+    /* background-color: black; */
+}
+.nbrsx input{
+   
+    outline:none;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(255, 0, 0);
+    text-shadow: 1px 1px 5px black;
+    text-align: center;
+    box-shadow: 1px 1px 10px 2px red;
+    background-color: rgb(78, 76, 76);
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 2px solid red;
+    width: 50px;
+    height: 50px;
+}
+
+.inp input:focus{
+    outline: 1px solid red;
+    border-radius: 10px;
+}  
+.inp input{
+
+    font-size: 19px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(255, 0, 0);
+    text-shadow: 1px 1px 5px black;
+    text-align: center;
+    background-color: rgb(78, 76, 76);
+    margin-top: 12px;
+    border-radius: 5px;
+    border: none;
+    width: 180px;
+    display: inline-block;
+    height: 50px;
+}
+.inp{
+    margin-top: 10px;
+    text-align: center;
+    box-shadow: 1px 1px 10px 2px red;
+    border: 2px solid red;
+    gap: 20px;
+    border-radius: 5px;
+    background-color: transparent;
+    width: 280px;
+    height: 170px;
+    /* margin-left: 10px; */
+}
+#finish{
+    width: 200px;
+    height: 40px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+#Bet{
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(1, 170, 1);
+    border: 2px solid rgb(29, 171, 4);
+    border-radius: 10px;
+    border-left: 1px;
+    border-right: 1px;
+}
+#waiting{
+ 
+    width: 200px;
+    height: 50px;
+    font-size: 16px;
+    transform: translateX(30px);
+    font-family: 'Courier New', Courier, monospace;
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+}
+h4{
+    margin-top: 10px;
+    color: red;
+    border: 1px solid red;
+    text-align: center;
+    width: 17px;
+    box-shadow: 0px 0px 5px 2px;
+    border-radius: 50px;
+}
+nav{
+    margin-top: -40px;
+    margin-left:22px;
+    text-align: center;
+    width: 80px;
+    color: red;
+}
+#how-to{
+    margin-top: 50px;
+    border-radius: 10px;
+    margin-left: -4px;
+    text-align: center;
+    width: 340px;
+    border: 2px solid red;
+    display: none;
+    box-shadow: 1px 1px 10px 2px red;
+}
+#how-to img{
+    width: 168px;
+}
+#how-to span{
+    text-transform: capitalize;
+    display: inline-block;
+    color: red;
+    /* box-shadow: 1px 1px 10px 2px red; */
+}
+#how-to span b {
+    font-family: 'Courier New', Courier, monospace;
+    color: grey;
+}
+h3{
+    /* border: 2px solid red; */
+    text-align: center;
+    width: 30px;
+    border-top-left-radius: 10px;
+    margin-left: -1px;
+    margin-top: -1px;
+    color: red;
+}
+#board{
+transform: translateY(-10px);
+}
+h3:hover{
+    box-shadow: 1px 1px 10px 5px inset grey;
+    cursor: pointer;
+    color: grey;
+}
+h4:hover{
+    border-color: grey;
+    cursor: pointer;
+    color: grey;
+}
+#Warning{
+    position: fixed;
+    transition: 0.5s;
+    text-transform: capitalize;
+    padding: 10px;
+    border:none;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+    font-size: 15px;
+   display: none;
+    font-family: 'Courier New', Courier, monospace,fantasy,cursive;
+    color: rgb(255, 0, 0);
+    width: 260px;
+    background-color: rgb(46, 45, 45);
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px 2px red;
+   
+}
+#Win-Lose{
+    position: fixed;
+    border: 2px solid red;
+    border-left: 1px;
+    border-right: 1px;
+    text-align: center;
+    font-size: 40px;   
+    font-family: fantasy;
+    color: rgb(38, 255, 0);
+    background-color: rgb(60, 60, 60);
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px 2px red;
+    display: none;
+    width: 280px;
+    padding-top: 5px;
+}
